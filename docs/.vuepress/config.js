@@ -45,90 +45,31 @@ module.exports = {
         title: '指南',
         collapsable: false,
         children: [
-          '/views/',
+          '/views/'
         ]
       },
       {
         title: '技术文档',
         collapsable: true,
         children: [
-          'views/technology/',
+          'views/technology/'
         ]
       },
       {
         title: '随笔',
         collapsable: true,
         children: [
-          'views/article/',
+          'views/article/'
         ]
       },
       {
         title: '其他',
         collapsable: true,
         children: [
-          'views/other/',
+          'views/other/'
         ]
       }
-    ],
-    // sidebar: {
-    //   '/views/technology/': [
-    //     {
-    //       title: '技术',
-    //       collapsable: true,
-    //       children: [
-    //         ['', 'README']
-    //       ]
-    //     },
-    //     {
-    //       title: '开发',
-    //       collapsable: true,
-    //       children: [
-    //         ['', 'README']
-    //         ['one', 'one'],
-    //         ['two', 'two']
-    //       ]
-    //     },
-    //     {
-    //       title: '前端',
-    //       collapsable: true,
-    //       children: [
-    //         ['', 'README']
-    //         ['three', 'three'],
-    //       ]
-    //     }
-    //   ],
-    //   '/views/essay/': [
-    //     {
-    //       title: '随笔',
-    //       collapsable: false,
-    //       children: []
-    //     },
-    //     ['', 'README']
-    //   ],
-    //   '/views/other/': [
-    //     {
-    //       title: '其他',
-    //       collapsable: false,
-    //       children: []
-    //     },
-    //     ['', 'README']
-    //   ],
-    //   '/views/about/': [
-    //     {
-    //       title: '关于',
-    //       collapsable: false,
-    //       children: []
-    //     },
-    //     ['', '技术文档'],
-    //     ['WebSetup', '搭建步骤'],
-    //     ['MarkDown', 'Markdown介绍'],
-    //     ['Question', '问题解决']
-    //   ],
-    //   '/': [
-    //     '指南'
-    //   ]
-    // },
-    sidebarDepth: 1
+    ]
   },
   configureWebpack: {
     resolve: {
