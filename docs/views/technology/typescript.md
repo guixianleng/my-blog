@@ -18,19 +18,25 @@ $ vue create vue-ts
 ![An image](https://user-gold-cdn.xitu.io/2019/4/30/16a6bdf5e89bc8d2?w=666&h=191&f=png&s=6636)
 选择更多功能 `Manully select features`   
 回车后来到选择插件
+
 2. 选择插件   
 这边选择了（Babel、Typescript、Router、Css预处理器、Linter / Formatter 格式检查、Unit测试框架）  
 `使用键盘空格选择插件`
 ![An image](https://user-gold-cdn.xitu.io/2019/4/30/16a6be50d19434c7?w=474&h=251&f=png&s=7121)
+
 3. 自动检测typescript（yes）
 ![An image](https://user-gold-cdn.xitu.io/2019/4/30/16a6bed1eea7aaa1?w=564&h=18&f=png&s=1453)
+
 4. 路由模式选择  
 是否使用 history模式的路由 （Yes）
 ![An image](https://user-gold-cdn.xitu.io/2019/4/30/16a6bee3cad31e82?w=881&h=23&f=png&s=2265)
+
 5. 选择一个css预处理器 (Sass/SCSS)
 ![An image](https://user-gold-cdn.xitu.io/2019/4/30/16a6bee874044778?w=878&h=86&f=png&s=4325)
+
 6. 选择格式检查规则（什么时候进行 tslint 校验: Line on save）
 ![An image](https://user-gold-cdn.xitu.io/2019/4/30/16a6bf064a05d085?w=834&h=73&f=png&s=4476)
+
 7. 是否保存这份预设配置？（yes）   
 选是的话，下次创建一个vue项目，可以直接使用这个预设文件，而无需再进行新的配置，直接使用选择的模板创建项目
 
