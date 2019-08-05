@@ -173,18 +173,18 @@ class ErrorBoundary extends React.Component {
 
 1. 初始化阶段(父组件和子组件)：
 <!-- ![](https://user-gold-cdn.xitu.io/2019/8/2/16c5037a121a537a?w=1776&h=1332&f=png&s=128671) -->
-![an image](/static/parent-children.png)
+![an image](/my-blog/static/parent-children.png)
 
 2. 运行阶段:父组件props/state更新
 
 子组件的shouldComponentUpdate返回false，则子组件其后的生命周期都不再进行，但是父组件的生命周期继续执行。
 <!-- ![](https://user-gold-cdn.xitu.io/2019/8/2/16c503779331827f?w=1872&h=1446&f=png&s=190328) -->
-![an image](/static/parent.png)
+![an image](/my-blog/static/parent.png)
 
 3. 卸载阶段: 卸载父组件
 
 <!-- ![](https://user-gold-cdn.xitu.io/2019/8/2/16c503c4368997f0?w=1514&h=524&f=png&s=59790) -->
-![an image](/static/unmount.png)
+![an image](/my-blog/static/unmount.png)
 
 2. 必传值的校验
 

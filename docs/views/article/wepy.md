@@ -1,7 +1,7 @@
 ### :tada: wepy踩坑
 
 ## 1. H5内嵌富文本编辑器
-微信小程序没有支持的原生富文本组件，可以通过web-view内嵌H5实现富文本编辑功能，起初使用的是wangEditor富文本编辑器，因为项目使用的是七牛云存储，wangEditor在pc端上传是没有问题的，但在在移动端调用不了本地图片，于是换了个功能强大二次开发较强的富文本编辑器[vue-quill-editor](!https://github.com/surmon-china/vue-quill-editor),更多请参考[官方文档](!https://github.com/surmon-china/vue-quill-editor)， 基于此对上传图片进行二次开发。
+微信小程序没有支持的原生富文本组件，可以通过web-view内嵌H5实现富文本编辑功能，起初使用的是wangEditor富文本编辑器，因为项目使用的是七牛云存储，wangEditor在pc端上传是没有问题的，但在在移动端调用不了本地图片，于是换了个功能强大二次开发较强的富文本编辑器[vue-quill-editor](https://github.com/surmon-china/vue-quill-editor),更多请参考[官方文档](https://github.com/surmon-china/vue-quill-editor)， 基于此对上传图片进行二次开发。
 
 > 七牛云 + elementUi + vue-quill-editor上传图片和富文本
 
