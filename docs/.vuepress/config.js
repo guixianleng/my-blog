@@ -49,17 +49,22 @@ module.exports = {
         ]
       },
       {
-        title: '技术文档',
+        title: '技术',
         collapsable: true,
         children: [
-          'views/technology/'
+          'views/technology/typescript.md',
+          'views/technology/reactBasis.md',
+          'views/technology/img.md',
+          'views/technology/reduxBasis.md'
         ]
       },
       {
-        title: '随笔',
+        title: '笔记',
         collapsable: true,
         children: [
-          'views/article/'
+          'views/article/vuepress.md',
+          'views/article/jenkins.md',
+          'views/article/wepy-mini-program.md'
         ]
       },
       {
