@@ -80,18 +80,21 @@ module.exports = {
 
 1. 部署时运行npm run deploy在git bash出现`Could not read from remote repository.Please make sure you have the correct access rights and the repository exist`
 
-:tada: 出现这个可能是仓库地址不对，解决如下：
+:::warning
+  出现这个可能是仓库地址不对，解决如下：
+:::
   - 使用一下命令查看下：$ git remote -v
   - 若提交地址不对，使用该命令更改仓库地址： $ git remote set-url origin XXX 
   - 重新push下就行了
 
-:tada: 出现这个可能是你的`deploy.sh`配置问题：
+:::warning
+  出现这个可能是你的`deploy.sh`配置问题：
+:::
   - 若你是用ssh拉取并push的，`deploy.sh`中设置 
   ```shell
     $ git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
   ```
-  - 若使用https拉取并提交的，`deploy.sh`中设置
+  - 若使用https拉取并push的，`deploy.sh`中设置
   ```shell
     $ git push -f https://github.com/<USERNAME>/<REPO>.git master:gh-pages
   ```
-

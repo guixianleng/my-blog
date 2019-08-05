@@ -44,7 +44,8 @@ handleClick (e) {
 
 ### 3.1 React v16.3之前的的生命周期：
 
-![image](https://segmentfault.com/img/bVblvVt?w=1280&h=591)
+<!-- ![image](https://segmentfault.com/img/bVblvVt?w=1280&h=591) -->
+![An image](/static/previous.png)
 
 #### 3.1.1 Mounting阶段
 
@@ -80,7 +81,8 @@ shouldComponentUpdate(nextProps, nextState, nextContext) {
 
 ### 3.2 React16.3之后的生命周期示意图：
 
-![image](https://user-gold-cdn.xitu.io/2019/8/2/16c5032fb315e2b9?w=1922&h=1188&f=png&s=141455)
+<!-- ![image](https://user-gold-cdn.xitu.io/2019/8/2/16c5032fb315e2b9?w=1922&h=1188&f=png&s=141455) -->
+![An image](/static/current.png)
 
 #### 3.2.1 getDerivedStateFromProps(props, state)
 
@@ -170,16 +172,20 @@ class ErrorBoundary extends React.Component {
 ## 6. 父子组件生命周期：
 
 1. 初始化阶段(父组件和子组件)：
-![](https://user-gold-cdn.xitu.io/2019/8/2/16c5037a121a537a?w=1776&h=1332&f=png&s=128671)
+<!-- ![](https://user-gold-cdn.xitu.io/2019/8/2/16c5037a121a537a?w=1776&h=1332&f=png&s=128671) -->
+![an image](/static/parent-children.png)
 
 2. 运行阶段:父组件props/state更新
 
 子组件的shouldComponentUpdate返回false，则子组件其后的生命周期都不再进行，但是父组件的生命周期继续执行。
-![](https://user-gold-cdn.xitu.io/2019/8/2/16c503779331827f?w=1872&h=1446&f=png&s=190328)
+<!-- ![](https://user-gold-cdn.xitu.io/2019/8/2/16c503779331827f?w=1872&h=1446&f=png&s=190328) -->
+![an image](/static/parent.png)
 
 3. 卸载阶段: 卸载父组件
 
-![](https://user-gold-cdn.xitu.io/2019/8/2/16c503c4368997f0?w=1514&h=524&f=png&s=59790)
+<!-- ![](https://user-gold-cdn.xitu.io/2019/8/2/16c503c4368997f0?w=1514&h=524&f=png&s=59790) -->
+![an image](/static/unmount.png)
+
 2. 必传值的校验
 
 > 在类型后面加上 `isRequired`

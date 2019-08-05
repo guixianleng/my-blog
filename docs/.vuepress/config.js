@@ -80,7 +80,8 @@ module.exports = {
     resolve: {
       alias: {
         '@': path.resolve('../../docs'),
-        'pages': path.resolve('@/pages')
+        'pages': path.resolve('@/views'),
+        'static': path.resolve('@/.vuepress/public/static')
       }
     }
   }

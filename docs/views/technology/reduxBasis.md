@@ -87,11 +87,11 @@ $ npm install redux --save
 
 2.4 插件`Redux DevTools`
 
-##### 安装
+### 安装
 
-[谷歌应用市场](!https://chrome.google.com/webstore?utm_source=chrome-ntp-icon)搜索 `Redux DevTools`并安装
+[谷歌应用市场](https://chrome.google.com/webstore?utm_source=chrome-ntp-icon)搜索 `Redux DevTools`并安装
 
-##### 配置
+### 配置
 ```js
 const store = createStore(reducer,
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())

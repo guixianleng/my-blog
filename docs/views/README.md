@@ -27,13 +27,10 @@
 - $emit： 组件触发自定义事件。
 - .sync：语法糖，单向数据流中，父组件监听到子组件props并修改，用了.sync不需要显式在父组件监听组件内部触发的自定义事件去修改值, 父组件只要写:x.sync="value", 注意此时子组件触发的事件必须是"update:x"此语法糖才生效。
 
-### 部分效果展示
-![](https://user-gold-cdn.xitu.io/2019/5/23/16ae3e5553970921?w=361&h=642&f=gif&s=1201931)
-![](https://user-gold-cdn.xitu.io/2019/5/23/16ae3eff314deb33?w=381&h=672&f=gif&s=44496)
-![](https://user-gold-cdn.xitu.io/2019/5/23/16ae35430e58923b?w=413&h=733&f=gif&s=73782)
-
 ## 4. 组件库
 ### 4.1. Toast组件
+
+![An image](/static/toast.gif)
 ---
 ### 基本用法
 ``` js
@@ -77,6 +74,7 @@ Toast.fail('失败文案');
 | animationName| 开启加载的动画名，只限于type为loading        |  `String`  | -          |
 ---
 ### 4.2. Step组件
+![An image](/static/steps.gif)
 ---
 ### 基本用法
 ``` html
@@ -98,6 +96,7 @@ Toast.fail('失败文案');
 | active-line-color | 自定义激活线束颜色               | `String` | `#268AED`   |
 ---
 ### 4.3. collapse组件
+![An image](/static/collapse.gif)
 ---
 ### 基本用法
 ``` html

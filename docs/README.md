@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /blog.jpg
+heroImage: /static/blog.jpg
 actionText: 快速进入 →
 actionLink: /views/
 features:
