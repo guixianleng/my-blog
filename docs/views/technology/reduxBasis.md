@@ -102,3 +102,5 @@ window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 ```
 表示：判断window有没有这个方法，有则执行这个方法。
+
+## 3. 未完待续

@@ -1,4 +1,4 @@
-### :100: React基础和进阶
+### :tada: React基础和进阶
 ## 1. props和state
 
 构造函数中定义 props 和 state ，`Props`是只读属性，传递给组件以呈现UI和状态, `state`是私有的，并且完全受控于当前组件

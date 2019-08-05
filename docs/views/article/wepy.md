@@ -1,6 +1,6 @@
-:100: H5富文本和踩坑记
+### :tada: wepy踩坑
 
-### 1.0 H5内嵌富文本编辑器
+## 1. H5内嵌富文本编辑器
 微信小程序没有支持的原生富文本组件，可以通过web-view内嵌H5实现富文本编辑功能，起初使用的是wangEditor富文本编辑器，因为项目使用的是七牛云存储，wangEditor在pc端上传是没有问题的，但在在移动端调用不了本地图片，于是换了个功能强大二次开发较强的富文本编辑器[vue-quill-editor](!https://github.com/surmon-china/vue-quill-editor),更多请参考[官方文档](!https://github.com/surmon-china/vue-quill-editor)， 基于此对上传图片进行二次开发。
 
 > 七牛云 + elementUi + vue-quill-editor上传图片和富文本
@@ -239,7 +239,7 @@ export default {
 }
 </style>
 ```
-### 2.0 使用[web-view](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html)组件传递数据的问题
+## 2. 使用[web-view](https://developers.weixin.qq.com/miniprogram/dev/component/web-view.html)组件传递数据的问题
 小程序内嵌网页向小程序回传数据时，尽量不要使用路由传参，比如富文本内容会自动截取掉src等号之后的字符串，应使用wx.miniProgram.postMessage()方法向小程序发送数据
 
 >注意：官方描述--网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息

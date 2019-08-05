@@ -1,4 +1,4 @@
-### :100: vuepress + GitHub pages部署博客
+### :tada: vuepress + GitHub pages部署博客
 <!-- more -->
 
 :tada: :tada: 这两天倒腾使用vuepress搭建自己的博客，遇到了一些问题，也选择了非官方的主题来使用，然后将其部署到GitHub pages
