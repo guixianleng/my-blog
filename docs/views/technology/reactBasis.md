@@ -45,7 +45,7 @@ handleClick (e) {
 ### 3.1 React v16.3之前的的生命周期：
 
 <!-- ![image](https://segmentfault.com/img/bVblvVt?w=1280&h=591) -->
-![An image](/static/previous.png)
+![An image](/my-blog/static/previous.png)
 
 #### 3.1.1 Mounting阶段
 
@@ -72,9 +72,9 @@ Mounting阶段叫挂载阶段，伴随着整个虚拟DOM的生成，它里边有
 ```js
 shouldComponentUpdate(nextProps, nextState, nextContext) {
     if (nextProps === xxx) {
-        return true
+      return true
     } else {
-        return false
+      return false
     }
 }
 ```
@@ -82,7 +82,7 @@ shouldComponentUpdate(nextProps, nextState, nextContext) {
 ### 3.2 React16.3之后的生命周期示意图：
 
 <!-- ![image](https://user-gold-cdn.xitu.io/2019/8/2/16c5032fb315e2b9?w=1922&h=1188&f=png&s=141455) -->
-![An image](/static/current.png)
+![An image](/my-blog/static/current.png)
 
 #### 3.2.1 getDerivedStateFromProps(props, state)
 
