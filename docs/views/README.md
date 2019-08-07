@@ -113,6 +113,40 @@ Toast.fail('失败文案');
 | align           | 展开动作的位置`left` `right`   | `String`       | `center`|
 | unfold-text     | 展开描述文字                   | `String`       | `展开`  |
 | fold-text       | 折叠描述文字                   | `String`       | `收起`  |
+
+### 4.4. Switch开关
+```html
+  <pl-switch />
+  <pl-switch is-checked />
+  <pl-switch oblate />
+```
 ---
+<pl-switch isChecked />
+
+<pl-switch oblate />
+
+<pl-switch onOff isChecked />
+
+<pl-switch rightWrong />
+
+<pl-switch rightWrong isDisabled />
+
+<pl-switch oblate isDisabled isChecked />
+
+<pl-switch groupOn />
+
+<pl-switch groupRw isChecked />
+
+### API
+
+|       参数      |         说明        |    类型  |      默认值    |
+|-----------------|---------------------|----------|----------------|
+| is-checked      | 是否选中             | `Boolean`       | `false` |
+| is-disabled     | 是否禁用选中         | `Boolean`       | `false` |
+| oblate          | 选中类型             | `Boolean`       | `false` |
+| right-wrong     | 选中文本展示类型      | `Boolean`       | `false` |
+| on-off          | 选中文本展示类型      | `Boolean`       | `false` |
+| group-on        | 内部文本展示类型      | `Boolean`       | `false` |
+| group-rw        | 内部文本展示类型      | `Boolean`       | `false` |
 
 > 未完待续
