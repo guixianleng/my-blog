@@ -29,9 +29,10 @@
 
 ## 4. 组件库
 ### 4.1. Toast组件
+---
 
 ![An image](/my-blog/static/toast.gif)
----
+
 ### 基本用法
 ``` js
 
@@ -74,8 +75,10 @@ Toast.fail('失败文案');
 | animationName| 开启加载的动画名，只限于type为loading        |  `String`  | -          |
 ---
 ### 4.2. Step组件
-![An image](/my-blog/static/steps.gif)
 ---
+
+![An image](/my-blog/static/steps.gif)
+
 ### 基本用法
 ``` html
 
@@ -96,8 +99,10 @@ Toast.fail('失败文案');
 | active-line-color | 自定义激活线束颜色               | `String` | `#268AED`   |
 ---
 ### 4.3. collapse组件
-![An image](/my-blog/static/collapse.gif)
 ---
+
+![An image](/my-blog/static/collapse.gif)
+
 ### 基本用法
 ``` html
 
