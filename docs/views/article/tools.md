@@ -1,33 +1,32 @@
-### :tada: 开发工具
+### :tada: Development Tools
 
 ## Google插件
- 
+
 工欲善其事, 必先利其器，那么开发过程中有哪些开发利器呢
- 
+
 ### 1. 翻墙软件和配置
 网址：https://www.namaho.org/ssweb/user/info
- 
+
 需要进行注册登录才能使用，下载`Shadowsocks`客户端，之后进行文件的配置，配置好了之后就可以翻墙了
- 
-<!-- ![](https://user-gold-cdn.xitu.io/2019/8/8/16c6ee77b753c175?w=334&h=364&f=png&s=64628) -->
+
 ![An image](/my-blog/static/setting.png)
- 
+
 :::warning
 注意：服务器地址会不定期更新的，请及时更新！
 :::
 
 ### 2. Vue调试开发工具 -- Vue Devtools
- 
+
 安装地址：//chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd
- 
+
 ![image](https://lh3.googleusercontent.com/gP43uJZR8VGzLCtyOx2T5q4qcMq79yZhynf3M4a2SEzCA7KKVAY6DPeD7_JWZlu60xLPMqKW=w640-h400-e365)
- 
+
 ### 3. Vue性能开发工具 -- Vue Performance Devtool
- 
+
 用于检查Vue组件性能的浏览器扩展
- 
+
 地址：//chrome.google.com/webstore/detail/vue-performance-devtool/koljilikekcjfeecjefimopfffhkjbne
- 
+
 安装好之后，启用：
 ```js
 Vue.config.performance = true
