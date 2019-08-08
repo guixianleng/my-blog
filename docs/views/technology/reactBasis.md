@@ -20,7 +20,45 @@ class Clock extends React.Component {
   }
 }
 ```
+:::warning
+没有 state 的组件叫无状态组件（stateless component），设置了 state 的叫做有状态组件（stateful component）
+:::
+- 有状态组件
+```js
+class HelloWorld extends Component {
+  constructor() {
+    super()
+  }
 
+  sayHi () {
+    alert('Hello World')
+  }
+
+  render () {
+    return (
+      <div onClick={this.sayHi.bind(this)}>Hello World</div>
+    )
+  }
+}
+```
+- 无状态组件(用函数式组件的编写方式)
+
+> 函数式组件只能接受 props 而无法像跟类组件一样可以在 constructor 里面初始化 state
+
+```js
+const HelloWorld = (props) => {
+  const sayHi = (event) => alert('Hello World')
+  return (
+    <div onClick={sayHi}>Hello World</div>
+  )
+}
+```
+
+**应当尽量多地写无状态组件，尽量少地写有状态的组件。这样会降低代码维护的难度，也会在一定程度上增强组件的可复用性**
+
+:::tip
+`state` 是让组件控制自己的状态，`props` 是让外部对组件自己进行配置。
+:::
 ## 2. setState回调函数
 
 **注意**：
@@ -33,9 +71,9 @@ class Clock extends React.Component {
 ```js
 handleClick (e) {
     this.setState({
-        value: e.target.value
+      value: e.target.value
     }, () => {
-        console.log(this.ul.querySelectorAll('div').length)
+      console.log(this.ul.querySelectorAll('div').length)
     })
 }
 ```
@@ -54,8 +92,8 @@ Mounting阶段叫挂载阶段，伴随着整个虚拟DOM的生成，它里边有
 - componentWillMount :  在组件即将被挂载到页面的时刻执行。
 - render : 页面state或props发生变化时执行。
 - componentDidMount  : 组件挂载完成时被执行。
--
-`执行顺序：componentWillMount --> render --> componentDidMount --> `
+
+`执行顺序：constructor --> componentWillMount --> render --> componentDidMount --> `
 
 `componentWillMount`和`componentDidMount`这两个生命周期函数，只在页面刷新时执行一次，而`render`函数是只要有state和props变化就会执行
 
@@ -194,25 +232,59 @@ class ErrorBoundary extends React.Component {
     name: PropTypes.string.isRequired
 ```
 
-## 7. PropType静态校验：
+## 7. PropType组件参数验证：
+
+通过`PropTypes`给组件参数做类型限制，给组件加上`propTypes`，也让组件的开发、使用更加规范清晰。
 
 > 详见官网[PropTypes](https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html)
 
 1. 基本以及复杂类型有：
-- .PropTypes.array
-- .PropTypes.bool
-- .PropTypes.func
-- .PropTypes.number
-- .PropTypes.object
-- .PropTypes.string
+```js
+  PropTypes.array
+  PropTypes.bool
+  PropTypes.func
+  PropTypes.number
+  PropTypes.object
+  PropTypes.string
+  PropTypes.node
+  PropTypes.element
+  ...
+```
 
 举例：
 
 ```js
-  demo.propTypes = {
+class demo extends Component {
+  static propTypes = {
     name: PropTypes.string,
     index: PropTypes.number,
     Func: PropTypes.func,
     list: PropTypes.array
   }
+}
 ```
+
+## 8. dangerouslySetInnerHTML属性
+
+可以动态设置元素的innerHTML，需要给`dangerouslySetInnerHTML`传入一个对象，这个对象的`__html`属性值就相当于元素的`innerHTML`
+
+> 为啥不设置innerHTML呢？--> 设置 innerHTML 可能会导致跨站脚本攻击（XSS）
+```js
+constructor (props) {
+  super(props)
+  this.state = {
+    content: '<h1>hello world</h1>'
+  }
+}
+render () {
+  return (
+    <div
+      className='editor-wrapper'
+      dangerouslySetInnerHTML={{__html: this.state.content}} />
+  )
+}
+```
+
+## 高阶组件（Higher-Order Components）
+
+定义： 高阶组件就是一个`函数`，传给它一个组件，它返回一个新的组件

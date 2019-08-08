@@ -2,8 +2,8 @@ const path = require('path')
 
 module.exports = {
   base:'/my-blog/',
-  title: `LenGxin Blog`,
-  description: 'This is my blog',
+  title: 'Technology blog -- FED',
+  description: 'Death is our final destination. enjoy the journey!',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
@@ -42,7 +42,7 @@ module.exports = {
     ],
     sidebar: [
       {
-        title: '指南',
+        title: 'vue-components',
         collapsable: false,
         children: [
           '/views/'
