@@ -9,11 +9,6 @@
         type="checkbox">
       <label :for="ids"></label>
     </div>
-    <!-- <input
-      :class="classObj"
-      v-else type="checkbox"
-      :checked="isChecked"
-      :disabled="isDisabled"> -->
   </div>
 </template>
 
@@ -41,7 +36,6 @@ export default {
       type: Boolean,
       default: false
     },
-    // type: String,
     groupOn: {
       type: Boolean,
       default: false
@@ -52,9 +46,6 @@ export default {
     }
   },
   computed: {
-    ids () {
-      return Math.random().toString(36).substring(2)
-    },
     classObj () {
       return {
         'pl-switch': true,
@@ -66,14 +57,31 @@ export default {
         'pl-switch-box__inner--right-wrong': this.groupRw
       }
     }
+  },
+  data () {
+    return {
+      ids: 'm_10'
+    }
+  },
+  mounted () {
+    let rand = (function () {
+      var today = new Date()
+      var seed = today.getTime()
+      function rnd () {
+        seed = (seed * 9301 + 49297) % 233280
+        return seed / 233280.0
+      }
+      return function (number) {
+        return Math.ceil(rnd() * number)
+      }
+    })()
+    // this.ids = 'm_' + rand(100)
+    this.ids = Math.random().toString(36).substring(2)
   }
 }
 </script>
 
 <style lang="less" scoped>
-html {
-  -webkit-text-size-adjust: none;
-}
 .box {
   margin: 20px 120px 20px 0;
   display: inline-block;
@@ -89,12 +97,14 @@ html {
   -webkit-appearance: none;
   transition: all .3s linear;
   position: relative;
+  cursor: pointer;
   &:disabled + label {
     cursor: not-allowed;
   }
   &:disabled {
     background-color: #ccc;
     opacity: 0.5;
+    cursor: not-allowed;
     &::after {
       background-color: #FFF;
       border: 1px solid #ccc;

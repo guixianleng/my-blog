@@ -64,7 +64,8 @@ module.exports = {
         children: [
           'views/article/vuepress.md',
           'views/article/jenkins.md',
-          'views/article/wepy.md'
+          'views/article/wepy.md',
+          'views/article/tools.md'
         ]
       },
       {
