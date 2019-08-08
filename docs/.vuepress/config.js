@@ -50,7 +50,7 @@ module.exports = {
       },
       {
         title: '技术',
-        collapsable: false,
+        collapsable: true,
         children: [
           'views/technology/typescript.md',
           'views/technology/reactBasis.md',
@@ -60,7 +60,7 @@ module.exports = {
       },
       {
         title: '笔记',
-        collapsable: false,
+        collapsable: true,
         children: [
           'views/article/vuepress.md',
           'views/article/jenkins.md',
