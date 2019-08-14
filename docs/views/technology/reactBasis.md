@@ -1,4 +1,4 @@
-### :tada: React基础和进阶
+### :tada: React基础
 ## 1. props和state
 
 构造函数中定义 props 和 state ，`Props`是只读属性，传递给组件以呈现UI和状态, `state`是私有的，并且完全受控于当前组件
@@ -85,7 +85,7 @@ handleClick (e) {
 <!-- ![image](https://segmentfault.com/img/bVblvVt?w=1280&h=591) -->
 ![An image](/my-blog/static/previous.png)
 
-#### 3.1.1 Mounting阶段
+### 3.1.1 Mounting阶段
 
 Mounting阶段叫挂载阶段，伴随着整个虚拟DOM的生成，它里边有三个小的生命周期函数，分别是：
 
@@ -97,7 +97,7 @@ Mounting阶段叫挂载阶段，伴随着整个虚拟DOM的生成，它里边有
 
 `componentWillMount`和`componentDidMount`这两个生命周期函数，只在页面刷新时执行一次，而`render`函数是只要有state和props变化就会执行
 
-#### 3.1.2 Updation阶段
+### 3.1.2 Updation阶段
 
 - `shouldComponentUpdate`函数会在组件更新之前，自动被执行，它要求返回一个布尔类型的结果，必须有返回值（**返回true，就同意组件更新；返回false，就反对组件更新**）
 - `componentWillUpdate`函数在组件更新之前，但`shouldComponenUpdate`函数之后被执行。但是如果`shouldComponentUpdate`函数返回false，这个函数就不会被执行了
@@ -122,7 +122,7 @@ shouldComponentUpdate(nextProps, nextState, nextContext) {
 <!-- ![image](https://user-gold-cdn.xitu.io/2019/8/2/16c5032fb315e2b9?w=1922&h=1188&f=png&s=141455) -->
 ![An image](/my-blog/static/current.png)
 
-#### 3.2.1 getDerivedStateFromProps(props, state)
+### 3.2.1 getDerivedStateFromProps(props, state)
 
 当组件的state需要根据props来改变的时候可调用此方法。这个方法是在 render() 前会被执行，每次触发render前，都会触发此方法。
 
@@ -130,18 +130,18 @@ shouldComponentUpdate(nextProps, nextState, nextContext) {
 
 `执行顺序：getDerivedStateFromProps() --> render() --> componentDidMount() -->`
 
-#### 3.2.2 showComponentUpdate()
+### 3.2.2 showComponentUpdate()
 在渲染新的props或state前，shouldComponentUpdate被调用，默认返回true
 
 若 shouldComponentUpdate() 返回 false ，则`getSnapshotBeforeUpdate()`, `render()` 和 `componentDidUpdate()`不会被执行。
 
 > 利用 shouldComponentUpdate 进行`优化性能`
 
-#### 3.2.3 getSnapshotBeforeUpdate(prevProps, prevState)
+### 3.2.3 getSnapshotBeforeUpdate(prevProps, prevState)
 
 在render()的输出被渲染到DOM之前被调用，该生命周期返回的任何值都将作为第三个参数传递给componentDidUpdate()
 
-#### 3.2.4 componentDidUpdate(prevProps, prevState, snapshot)
+### 3.2.4 componentDidUpdate(prevProps, prevState, snapshot)
 在更新发生后调用 componentDidUpdate()，如将当前的props与以前的props进行比较
 
 例如：
@@ -150,7 +150,7 @@ shouldComponentUpdate(nextProps, nextState, nextContext) {
 
 `执行顺序：shouldComponentUpdate返回true --> getSnapshotBeforeUpdate --> componentDidUpdate`
 
-#### 3.2.5 Unmounting阶段
+### 3.2.5 Unmounting阶段
 
 `componentWillUnmount`函数时组件从页面中删除的时候执行
 
@@ -197,7 +197,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 ```
-#### componentDidCatch和getDerivedStateFromError区别：
+### componentDidCatch和getDerivedStateFromError区别：
 
 如果异常发生在`render`阶段，React就会调用`getDerivedStateFromError`，如果异常发生在第commit阶段，React会调用`componentDidCatch`。
 
@@ -224,13 +224,6 @@ class ErrorBoundary extends React.Component {
 <!-- ![](https://user-gold-cdn.xitu.io/2019/8/2/16c503c4368997f0?w=1514&h=524&f=png&s=59790) -->
 ![an image](/my-blog/static/unmount.png)
 
-2. 必传值的校验
-
-> 在类型后面加上 `isRequired`
-
-```js
-    name: PropTypes.string.isRequired
-```
 
 ## 7. PropType组件参数验证：
 
@@ -238,7 +231,7 @@ class ErrorBoundary extends React.Component {
 
 > 详见官网[PropTypes](https://zh-hans.reactjs.org/docs/typechecking-with-proptypes.html)
 
-1. 基本以及复杂类型有：
+### 7.1. 基本以及复杂类型有：
 ```js
   PropTypes.array
   PropTypes.bool
@@ -263,6 +256,13 @@ class demo extends Component {
   }
 }
 ```
+### 7.2. 必传值的校验
+
+> 在类型后面加上 `isRequired`
+
+```js
+    name: PropTypes.string.isRequired
+```
 
 ## 8. dangerouslySetInnerHTML属性
 
@@ -284,7 +284,6 @@ render () {
   )
 }
 ```
-
 ## 高阶组件（Higher-Order Components）
 
 定义： 高阶组件就是一个`函数`，传给它一个组件，它返回一个新的组件

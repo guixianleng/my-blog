@@ -10,5 +10,8 @@
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "vuepress": "^1.0.1"
+  },
+  "dependencies": {
+    "vuepress-plugin-cat": "^1.0.3"
   }
 }

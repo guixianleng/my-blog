@@ -2,7 +2,7 @@ const path = require('path')
 
 module.exports = {
   base:'/my-blog/',
-  title: 'Technology blog -- FED',
+  title: 'FED',
   description: 'Death is our final destination. enjoy the journey!',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
@@ -52,10 +52,11 @@ module.exports = {
         title: '技术',
         collapsable: true,
         children: [
-          'views/technology/typescript.md',
           'views/technology/reactBasis.md',
+          'views/technology/reduxBasis.md',
+          'views/technology/reactPro.md',
           'views/technology/img.md',
-          'views/technology/reduxBasis.md'
+          'views/technology/typescript.md',
         ]
       },
       {
@@ -84,5 +85,8 @@ module.exports = {
         'static': path.resolve('@/.vuepress/public/static')
       }
     }
-  }
+  },
+  plugins: [
+    "vuepress-plugin-cat",
+  ]
 }

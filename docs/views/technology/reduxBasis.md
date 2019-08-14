@@ -1,4 +1,4 @@
-### :tada: Redux的TodoList
+### :100: Redux的TodoList
 ## 1. Redux介绍
 Redux 是 JavaScript 状态容器，提供可预测化的状态管理。官方的数据流如下图：
 ![image](https://user-gold-cdn.xitu.io/2019/7/29/16c3b1b732f51043?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
