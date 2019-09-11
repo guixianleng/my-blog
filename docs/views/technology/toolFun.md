@@ -129,7 +129,7 @@ export function toMiddleLine (str) {
 toMiddleLine(PlInputGroup) --> pl-input-group
 :::
 
-## 6. 浏览器类型判断
+## 6. 手机端运行环境判断
 ```js
 BrowserType = {
   isAndroid: Boolean(navigator.userAgent.match(/android/ig)),
