@@ -53,9 +53,7 @@ imgError (event) {
 </script> 
 ```
 ## 2. 全局监听
-
-2.1 网络正常情况：
-
+### 网络正常情况：
 ```js
 window.addEventListener('error', function (e) {
     // 当前异常是由图片加载异常引起的
@@ -64,11 +62,8 @@ window.addEventListener('error', function (e) {
     }
 }, true)
 ```
-
-2.2 网络异常情况：
-
+### 网络异常情况：
 必然会出现什么网络图片都无法加载的情况，这样就会导致我们监听的 error 事件 被无限触发，所以我们可以设定一个计数器，当达到期望的错误次数时停止对图片赋予默认图片的操作，改为提供一个Base64的图片（网络异常时，default.img也是加载不了的，那么base64就能解决这个问题）
-
 ```js
 window.addEventListener('error', function (e) {
     let target = e.target,

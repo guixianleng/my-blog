@@ -49,14 +49,15 @@ module.exports = {
         ]
       },
       {
-        title: '技术',
+        title: '知识点',
         collapsable: true,
         children: [
+          'views/technology/toolFun.md',
           'views/technology/reactBasis.md',
           'views/technology/reduxBasis.md',
           'views/technology/reactPro.md',
           'views/technology/img.md',
-          'views/technology/typescript.md',
+          'views/technology/typescript.md'
         ]
       },
       {
@@ -70,10 +71,10 @@ module.exports = {
         ]
       },
       {
-        title: '其他',
+        title: '实战项目',
         collapsable: true,
         children: [
-          'views/other/'
+          'views/other/ReactMusic.md'
         ]
       }
     ]
